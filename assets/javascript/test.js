@@ -24,6 +24,7 @@ var answerArray = [];
 document.onkeyup = function(event) {
     var userInput = event.key; // gives a letter
     var userKey = event.keyCode; //gives a number
+    var win = answerArray.length
     if (userKey > 64 && userKey <91) {
         if (wrong.indexOf(event.key)==-1){
             if (currentWord.indexOf(event.key) === -1){
@@ -38,19 +39,18 @@ document.onkeyup = function(event) {
         }
         if (currentWord.indexOf(event.key) > -1){
 
+            win --;
             for (var i = 0; i < answerArray.length; i++){
                
                 
+                console.log(win)
                 if (currentWord[i]==event.key){
                     answerArray[i] = currentWord[i]
                 }
-            
             }
-            
-        //if (currentWord == answerArray){
-          //  document.write("You Win");
-            //console.log(answerArray);
-        }
+        if (win == 0) 
+            document.write("You Win");
+            console.log(answerArray);
         }   
      }
 }
