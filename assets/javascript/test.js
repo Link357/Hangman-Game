@@ -47,9 +47,9 @@ document.onkeyup = function(event) {
             
             }
             
-        if (currentWord == answerArray){
-            document.write("You Win");
-            console.log(answerArray);
+        //if (currentWord == answerArray){
+          //  document.write("You Win");
+            //console.log(answerArray);
         }
         }   
      }
